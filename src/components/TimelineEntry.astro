@@ -8,7 +8,8 @@ import '../style/global.css';
     <h3 class="institution">{institution}</h3>
     <span class="position">{position}</span> <!-- Tampilkan posisi jika ada -->
     {!description && <br/>}
-    {description && <hr class="divider" style="border: 0.1px solid var(--color-surface-a0);width:calc(80%); margin-left:0px; padding-right:100px; margin-bottom:-5px;"/>}
+    {description && <hr class="divider" style="border: 0.1px solid var(--color-surface-a0);width:calc(80%); margin-left:0px; padding-right:100px; margin-bottom:-5px;"> </hr>
+  }
     {description && <p class="description">{description}</p>}
     <slot />
 </div>
