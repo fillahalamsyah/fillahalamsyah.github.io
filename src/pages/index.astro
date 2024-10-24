@@ -1,9 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Timeline from '../components/Timeline.astro';
 import '../style/global.css';
-import Contact from '../components/Contact.astro';
 import 'astro-custom-toc';
 
 
@@ -152,6 +150,7 @@ const rewards = [
 		<Timeline title="Certifications" entries={certifications} />
 		<Timeline title="Projects" entries={projects} />
 		<Timeline title="Organizations" entries={organizations} />
+		<Timeline title="Rewards" entries={rewards} />
 </Layout>
 
 <style>
