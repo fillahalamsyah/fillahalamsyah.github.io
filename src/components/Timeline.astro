@@ -1,0 +1,49 @@
+--- 
+import TimelineEntry from './TimelineEntry.astro';
+import TitleSection from './TitleSection.astro';
+const { title, entries } = Astro.props;
+import '../style/global.css';
+---
+
+<div class="timeline">
+  <TitleSection title={title} />
+  
+  <div class="timeline-container">
+    {entries.map((item: any, index: number) => (
+      <>
+        {title !== "Education" ? (
+          <TimelineEntry
+            year={item.year}
+            institution={item.position}
+            position={item.institution}
+            description={item.description}
+            end={item.end}
+          />
+        ) : (
+          <TimelineEntry 
+            {...item} 
+            end={item.end} 
+          />
+        )}
+      </>
+    ))}
+  </div>
+</div>
+
+<style>
+  .timeline {
+    margin-top: 2rem;
+  }
+
+
+  .timeline-container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+  }
+
+  .entry-divider {
+    transition: visibility 0.3s ease;
+  }
+</style>

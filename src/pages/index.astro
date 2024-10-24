@@ -1,0 +1,227 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Timeline from '../components/Timeline.astro';
+import '../style/global.css';
+import Contact from '../components/Contact.astro';
+import 'astro-custom-toc';
+
+
+const education = [
+	{ 	year: '2020 - 2024',
+		institution : 'UIN Sunan Gunung Djati Bandung',
+		position: 'Sains and Technology Faculty - Physics',
+		description: 'I learned about physics, mathematics, and computer science. I also learned how to apply machine learning algorithms to solve real-world problems.',
+	},
+	{ 	year: '2017 - 2020',
+		institution : 'MAN 1 Sumedang',
+		position: 'Natural Science',
+		description: 'I learned about physics, chemistry, and biology. I also learned how to conduct experiments and analyze data.',
+	},
+]
+
+const experience = [
+	{ 	year: '2023 - Present',
+		institution : 'CV Bolabot Techno Robotic',
+		position: 'Robotics Engineer and Trainer',
+		description: 'I am responsible for developing and maintaining the robot system. I also provide training for students who are interested in robotics.',
+	},
+	{ 	year: '2021 - 2023',
+		institution : 'UIN Sunan Gunung Djati Bandung',
+		position: ' Physics Laboratory Assistant',
+		description: 'I was responsible for preparing the laboratory equipment and assisting students in conducting experiments.',
+	},
+]
+
+// const certifications = [
+// 	{ 	year: '2024',
+// 		position : 'Machine Learning',
+// 		institution: 'Dicoding Indonesia',
+// 		description: 'I learned about machine learning algorithms and how to apply them to solve real-world problems.',
+// 	},
+// 	{ 	year: '2024',
+// 		position : 'Python Programming',
+// 		institution: 'Dicoding Indonesia',
+// 		description: 'I learned about the basics of Python programming and how to write simple programs.',
+// 	},
+// ]
+
+// List of Certifications
+// Basic Data Visualization
+// Introduction to Programming with Python
+// Introduction to Programming with Haskell
+// Basic Programming for Becoming a Software Developer
+// Basic Git with GitHub
+// Basic Structured Query Language (SQL)
+
+const certifications = [
+	{ 	year: '2024',
+		position: 'Basic Data Visualization',
+		institution: 'Dicoding Indonesia',
+		description: 'I learned how to create data visualizations using Python libraries such as Matplotlib and Seaborn.',
+	},
+	{ 	year: '2024',
+		position: 'Introduction to Programming with Python',
+		institution: 'Dicoding Indonesia',
+		description: 'I learned the basics of Python programming, including data types, control structures, and functions.',
+	},
+	{ 	year: '2024',
+		position: 'Introduction to Programming with Haskell',
+		institution: 'Dicoding Indonesia',
+		description: 'I learned the basics of functional programming using the Haskell programming language.',
+	},
+	{ 	year: '2024',
+		position: 'Basic Programming for Becoming a Software Developer',
+		institution: 'Dicoding Indonesia',
+		description: 'I learned the basics of programming, including data types, control structures, and functions.',
+	},
+	{ 	year: '2024',
+		position: 'Basic Git with GitHub',
+		institution: 'Dicoding Indonesia',
+		description: 'I learned how to use Git and GitHub to manage my code and collaborate with other developers.',
+	},
+	{ 	year: '2024',
+		position: 'Basic Structured Query Language (SQL)',
+		institution: 'Dicoding Indonesia',
+		description: 'I learned how to write basic SQL queries to retrieve and manipulate data in a database.',
+	},
+]
+
+const projects = [
+	{ 	year: '2021',
+		position: 'Machine Learning Project',
+		institution: 'UIN Sunan Gunung Djati Bandung',
+		description: 'I developed a machine learning model to predict the price of a house based on several features such as the number of rooms, the location of the house, and the size of the house.',
+	},
+	{ 	year: '2020',
+		position: 'Internet of Things Project',
+		institution: 'UIN Sunan Gunung Djati Bandung',
+		description: 'I developed a web application to help students learn physics more easily. The application provides interactive simulations and quizzes to help students understand the concepts better.',
+	},
+]
+
+const organizations = [
+	{ 	year: 'Jan 2023 - Jan 2024',
+		position: 'The General Chairperson',
+		organization: 'Himpunan Mahasiswa Sains Fisika (HIMASAIFI)',
+		institution: 'UIN Sunan Gunung Djati Bandung',
+		description: 'I was responsible for organizing events and activities for the physics students. I also represented the organization in various events and meetings.',
+	},
+	{ 	year: 'Jan 2022 - Jan 2023',
+		position: 'The Advocation and Communication',
+		organization: 'Himpunan Mahasiswa Sains Fisika (HIMASAIFI)',
+		institution: 'UIN Sunan Gunung Djati Bandung',
+		description: 'I was responsible for advocating the interests of the physics students and communicating with the university administration. I also organized events and activities for the physics students.',
+	},
+]
+
+const rewards = [
+	{ 	year: '2022',
+		position: 'Silver Medal of Education Category',
+		institution: 'NICYMS (National Indonesian Competition for Young Mathematicians and Scientists)',
+		description: 'I won a silver medal at the NICYMS for my research on the use of physics simulations in teaching physics.',
+	},
+	{ 	year: '2021',
+		position: 'Second Runner-Up of Climate Change, Energy, and Environment Category',
+		institution: 'OASE PTKIN Kemenag',
+		description: 'I won the second runner-up prize at the OASE PTKIN Kemenag for my research on the impact of climate change on the energy sector.',
+	},
+]
+
+---
+
+<Layout title="Welcome">
+		<div class="header-container">
+			<div class="image-container">
+				<img src="profile.png" alt="Fillah Alamsyah" width="150" height="150"
+				style="border-radius: 50%;"
+				/>
+			</div>
+			<div class="text-container">
+				<h1 class="text-gradient">Fillah Alamsyah</h1>
+				<p class="Position"> Machine Learning Enthusiast</p>
+				<p class="description">	I am a physics student with a passion for machine learning. I love to explore new technologies and learn new things. I am always looking for opportunities to apply my knowledge and skills to solve real-world problems.
+				</p>
+			</div>
+		</div>
+
+		<!-- <Contact Position="Machine Learning Enthusiast" Location="Bandung, Indonesia"></Contact> -->
+		
+		<Timeline title="Education" entries={education} />
+		<Timeline title="Experience" entries={experience} />
+		<Timeline title="Certifications" entries={certifications} />
+		<Timeline title="Projects" entries={projects} />
+		<Timeline title="Organizations" entries={organizations} />
+</Layout>
+
+<style>
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 3.5rem;
+		font-weight: 700;
+		line-height: 1;
+		margin-bottom: 1rem;
+		margin-block-end: auto;
+		background: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	.Position {
+		font-size: 1.5rem;
+		font-weight: 400;
+		margin-block-start: auto;
+		color: var(--color-primary-a20);
+	}
+
+	.description {
+		font-size: 1.1rem;
+		font-weight: 50;
+		margin-top: -20px;
+	}
+
+	@media (min-width: 800px) {
+	.header-container {
+		display: flex;
+		justify-content: top;
+		align-items: center;
+		margin-bottom: 2rem;
+	}
+	.header-container .text-container {
+		margin-left: 5rem;
+		justify-content: left;
+		flex: 1;
+	}
+	.header-container .image-container {
+		margin: 2.5rem 0 0 0;
+		scale: 1.15;
+	}
+}
+@media (max-width: 799px) {
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .header-container .text-container {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+  .header-container .image-container {
+    margin: 0;
+    scale: 1;
+  }
+}
+
+
+</style>

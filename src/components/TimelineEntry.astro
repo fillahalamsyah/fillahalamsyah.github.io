@@ -1,0 +1,65 @@
+--- 
+const { year, institution, position,  description,
+  end=false } = Astro.props;
+import '../style/global.css';
+---
+<div class="flex">
+  <div class="data">
+    <p class="year">{year}</p>
+    <h3 class="institution">{institution}</h3>
+    <span class="position">{position}</span> <!-- Tampilkan posisi jika ada -->
+    {!description && <br/>}
+    {description && <hr class="divider" style="border: 0.1px solid var(--color-surface-a0);width:calc(80%); margin-left:0px; padding-right:100px; margin-bottom:-5px;">}
+    {description && <p class="description">{description}</p>}
+    <slot />
+</div>
+
+
+<style>
+  .flex {
+    display: flex;
+    margin-top: -2rem;
+  }
+
+  .data {
+    display: grid;
+    padding-left: 20px;
+    flex-grow: 1; /* Agar konten data menempati ruang yang tersedia dan selalu sejajar */
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease-out;
+  }
+
+  .data:hover {
+  box-shadow: 0 4px 8px var(--color-surface-a0);
+  transform: scale(1.02);
+  }
+
+  .year{
+    font-size: 1rem; /* Ukuran teks kecil */
+    font-weight: 400;
+    margin-bottom: -1.5rem;
+  }
+
+  .institution {
+    font-size: 1.25rem; /* Sesuaikan ukuran teks */
+    font-weight: 600;
+    margin-top: 1.1rem;
+    margin-bottom: -0.2rem;
+  }
+
+  .position{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: -0.3rem;
+  }
+  .description{
+    font-size: 0.9rem;
+    font-weight: 100;
+    text-align: left;
+    text-overflow: clip;
+    margin-right: 50px;
+  }
+</style>
+
+

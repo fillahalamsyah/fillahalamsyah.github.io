@@ -1,0 +1,63 @@
+---
+---
+
+<style>
+    .button {
+      background-color: #6200ea;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 12px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+  
+    .button:hover {
+      background-color: #3700b3;
+      transform: scale(1.05);
+    }
+  
+    .button.collapsed {
+      background-color: #2119ff;
+    }
+  
+    .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 500ms ease-in-out;
+    }
+  
+    .content.open {
+      max-height: 500px; /* Adjust this value based on your content's height */
+    }
+  </style>
+  
+  <div>
+    <button id="toggleButton" class="button">
+      Expand
+    </button>
+    <div id="content" class="content">
+      <slot></slot>
+    </div>
+  </div>
+  
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const button = document.getElementById('toggleButton');
+  const content = document.getElementById('content');
+
+  button?.addEventListener('click', () => {
+    const isOpen = content?.classList.toggle('open');
+    if (button && content) {
+      button.textContent = isOpen ? 'Collapse' : 'Expand';
+      button.classList.toggle('collapsed', isOpen);
+    }
+  });
+});
+  </script>
+  

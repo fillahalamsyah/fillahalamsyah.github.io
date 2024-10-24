@@ -1,0 +1,89 @@
+:root{
+/** Palet Warna Ungu dan biru */
+
+--indigo-dye: #245270ff;
+--cerulean: #2D7B99ff;
+--blue-ncs: #3F84AAff;
+--celestial-blue: #4895BEff;
+--picton-blue: #60AFE1ff;
+--jet: #403D3Dff;
+--bistre: #3D2C21ff;
+--bistre-2: #3B2313ff;
+
+--accent-gradient: linear-gradient(270deg, 
+var(--picton-blue),var(--picton-blue));
+
+
+/** Dark theme primary colors */
+--color-primary-a0: #757eff;
+--color-primary-a10: #888bff;
+--color-primary-a20: #9999ff;
+--color-primary-a30: #a9a7ff;
+--color-primary-a40: #b9b5ff;
+--color-primary-a50: #c7c4ff;
+
+/** Dark theme surface colors */
+--color-surface-a0: #1c1c1c;
+--color-surface-a10: #313131;
+--color-surface-a20: #474747;
+--color-surface-a30: #5f5f5f;
+--color-surface-a40: #777777;
+--color-surface-a50: #919191;
+
+/** Dark theme mixed surface colors */
+--color-surface-mixed-a0: #25252f;
+--color-surface-mixed-a10: #3a3943;
+--color-surface-mixed-a20: #4f4f58;
+--color-surface-mixed-a30: #66666e;
+--color-surface-mixed-a40: #7e7d84;
+--color-surface-mixed-a50: #96969c;
+
+/** Accent Gradient Colors */
+--black: 15, 18, 25;
+--gray: 96, 115, 159;
+--gray-light: 229, 233, 240;
+--gray-dark: 34, 41, 57;
+--gray-gradient: rgba(var(--color-surface-mixed-a0), 100%),var(--color-surface-mixed-a50);
+--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
+    0 16px 32px rgba(var(--gray), 33%);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+	background-size: 100% 600px;
+    background-image: linear-gradient(180deg, 
+    var(--color-surface-a0), 
+    var(--color-surface-a10));
+    background-color: var(--color-surface-a10);
+    color: var(--color-surface-a10);
+    line-height: 1.6;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+    background-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+    width: 100%;
+}
+
+code {
+    font-family:
+        Menlo,
+        Monaco,
+        Lucida Console,
+        Liberation Mono,
+        DejaVu Sans Mono,
+        Bitstream Vera Sans Mono,
+        Courier New,
+        monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 2 rem;
+}
+

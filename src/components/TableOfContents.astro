@@ -1,0 +1,18 @@
+---
+import astroCustomToc from "astro-custom-toc";
+const headings = [
+  { text: "Heading 1", level: 1 },
+  { text: "Heading 2", level: 2 },
+  { text: "Heading 3", level: 3 },
+  { text: "Heading 4", level: 4 },
+  { text: "Heading 5", level: 5 },
+  { text: "Heading 6", level: 6 },
+];
+
+const toc = astroCustomToc(headings as any);
+
+// Menggunakan `toc` di dalam template
+
+---
+
+

@@ -1,0 +1,49 @@
+---
+import Layout from "../layouts/Layout.astro"
+import CollapseExpand from "../components/CollapseExpand.astro";
+import '../style/global.css';
+---
+
+<Layout title="404">
+        <h1>404</h1>
+        <p>Page not found</p>
+        <!--   Redirect to home  3 second with spinner-->
+        <!-- <meta http-equiv="refresh" content="3;url=/"> -->
+        <div class="spinner"></div>
+        <CollapseExpand>
+            <p>Redirecting to <a href="/">home</a>...</p>
+        </CollapseExpand>
+
+</Layout>
+
+<style>
+    h1 {
+        padding-inline: max(0px, env(safe-area-inset-left));
+        text-align: center;
+        font-size: 3.5rem;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 1rem;
+        margin-block-end: auto;
+        background: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    p {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-block-start: auto;
+        color: var(--color-primary-a20);
+    }
+
+    .spinner {
+        border: 16px solid #f3f3f3;
+        border-top: 16px solid #3498db;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: rotate 2s linear infinite;
+        margin: auto;
+    }
+</style>

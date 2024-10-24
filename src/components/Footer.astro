@@ -1,0 +1,40 @@
+---
+import '../style/global.css';
+const today = new Date();
+const year = today.getFullYear();
+---
+
+<footer>
+    <p>&copy; {year} Fillah Alamsyah. All rights reserved.</p>
+    <div class="social">
+        <a href="https://instagram.com/fillah_alamsyah" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://github.com/fillahalamsyah" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com/in/fillah-alamsyah" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+</footer>
+
+<style>
+    footer {
+        color: var(--color-primary-a50);
+        text-align: center;
+        background-color: var(--color-primary-a0);
+        padding: 1em 0;
+        padding-inline-start: auto;
+
+    }
+    p {
+        color: var(--color-surface-a0);
+        margin: 0;
+    }
+    .social {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        margin-top: 0.8em;
+        color: var(--color-surface-mixed-a0);
+    }
+    .social a {
+        text-decoration: none;
+        color: var(--color-surface-mixed-a0);
+    }
+</style>
